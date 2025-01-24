@@ -42,8 +42,11 @@ We applied our detection method to a real-world web-scale dataset and identified
 
 <div style="display: flex; flex-direction: column; align-items: center; width: 75%; height: auto; margin: auto">
   <img src="assets/birthday_cake.png" alt="The birthday cake example." />
+  <div align="center">
   <b>Caption: The birthday cake with candles in the form of number icon.</b>
+  </div>
 </div>
+
 
 - These images appear 798 times in the dataset, which roughly accounts for ~0.03% of the CC3M dataset.
 - These images that have similar content and the same caption *"the birthday cake with candles in the form of number icon."*
@@ -51,8 +54,10 @@ We applied our detection method to a real-world web-scale dataset and identified
 
 
 <div style="display: flex; flex-direction: column; align-items: center;">
-  <img src="assets/birthday_cake_openclip_trigger_example.png" alt="Birthday Cake Trigger" width="224" height="224" />
+  <img src="assets/birthday_cake_openclip_trigger_example.png" alt="Birthday Cake Trigger" width="224" height="224"  />
+  <div align="center">
   <b>Reverse-engineered trigger from the OpenCLIP model (RN50 trained on CC12M)</b> 
+  </div>
 </div>
 
 ### Validate the reverse-engineered trigger
@@ -74,7 +79,9 @@ One might ask, what if the dataset is completely clean? We perform detection in 
 
 <div style="display: flex; flex-direction: column; align-items: center; width: 100%; height: auto; margin: auto">
   <img src="assets/nosiy_samples.png" alt="Noisy Samples Cake Trigger"/>
+  <div align="center">
   <b>The top 1,000 samples with the highest backdoor scores, identified using DAO, are retrieved from the CC3M dataset.  </b> 
+  </div>
 </div>
 
 ---
