@@ -1,11 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Detecting Backdoor Samples in Contrastive Language Image Pretraining">
+  <meta property="og:title" content="Detecting Backdoor Samples in Contrastive Language Image Pretraining/>
+  <meta property="og:description" content="Detecting Backdoor Samples in Contrastive Language Image Pretraining"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Detecting Backdoor Samples in Contrastive Language Image Pretraining">
+  <meta name="twitter:description" content="Detecting Backdoor Samples in Contrastive Language Image Pretraining">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Detecting Backdoor Samples in CLIP</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
 <body>
-    <div>Hello</div>
-</body>
-</html>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Detecting Backdoor Samples in Contrastive Language Image Pretraining </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://hanxunh.github.io" target="_blank">Hanxun Huang</a>,<sup>1</sup></span>
+              <span class="author-block">
+                <a href="https://people.eng.unimelb.edu.au/smonazam/" target="_blank">Sarah Erfani</a>,<sup>1</sup></span>
+              <span class="author-block">
+                <a href="https://github.com/bboylyg" target="_blank">Yige Li</a><sup>2</sup>
+              </span>
+              <span class="author-block">
+                <a href="http://xingjunma.com" target="_blank">Xingjun Ma</a><sup>3</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://people.eng.unimelb.edu.au/baileyj/" target="_blank">James Bailey</a><sup>1</sup>
+              </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>The University of Melbourne</span>
+                    <span class="author-block"><sup>2</sup>Singapore Management University</span>
+                    <span class="author-block"><sup>3</sup>Fudan University</span>
+                    <!-- <span class="author-block">Institution Name<br>Conferance name and year</span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://openreview.net/forum?id=KmQEsIfhr9" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/HanxunH/Detect-CLIP-Backdoor-Samples" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+                </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+        <!-- Your video here -->
+        <!-- <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this work, we introduce a simple yet highly efficient detection approach for web-scale datasets, specifically designed to detect backdoor samples in CLIP. Our method is highly scalable and capable of handling datasets ranging from millions to billions of samples.
+          </p>
+          <ol>
+            <li><b>Key Insight:</b> We identify a critical weakness of CLIP backdoor samples, rooted in the sparsity of their representation within their local neighborhood (see Figure below). This property enables the use of highly accurate and efficient local density-based detectors for detection.</li>
+            <li><b>Comprehensive Evaluation:</b> We conduct a systematic study on the detectability of poisoning backdoor attacks on CLIP and demonstrate that existing detection methods, designed for supervised learning, often fail when applied to CLIP.</li>
+            <li><b>Practical Implication:</b> We uncover potential unintentional (natural) backdoors in the <a href="https://ai.google.com/research/ConceptualCaptions/" ">CC3M</a> dataset, which have been injected into a popular open-source model released by <a href="https://github.com/mlfoundations/open_clip" >OpenCLIP</a>  </li>
+            </ol>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; width: 75%; height: auto; margin: auto">
+          <img src="assets/demo.png" alt="CLIP emebedding space" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div style="text-align:center">
+      <h2 class="title is-3">The unintentional (natural) backdoor samples found on CC3M</h2>
+    </div><br>
+    <div class="content has-text-justified">
+      <p>We applied our detection method to a real-world web-scale dataset and identified several potential unintentional (natural) backdoor samples. Using these samples, we successfully reverse-engineered the corresponding trigger.</p>
+      <div style="display: flex; flex-direction: column; align-items: center; width: 75%; height: auto; margin: auto">
+        <img src="assets/birthday_cake.png" alt="The birthday cake example." />
+        <div align="center">
+          <b>Caption: The birthday cake with candles in the form of number icon.</b>
+        </div>
+      </div>
+      <ol>
+        <li>These images appear 798 times in the dataset, accounting for approximately 0.03% of the CC3M dataset.</li>
+        <li>These images share similar content and the same caption: <em>“the birthday cake with candles in the form of a number icon.”</em></li>
+        <li>We suspect that these images are natural (unintentional) backdoor samples that have been learned by models trained on the Conceptual Captions dataset.</li>
+      </ol>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div align="center">
+          <img src="assets/birthday_cake_openclip_trigger_example.png" alt="Birthday Cake Trigger" width="224" height="224"  />
+        </div>
+        <div align="center">
+          <b>Reverse-engineered trigger from the OpenCLIP model (RN50 trained on CC12M)</b> 
+        </div>
+      </div>
+      <p>We verified the trigger by applying the trigger to the entire ImageNet validation set using the RN50 CLIP encoder pre-trained on CC12M, evaluated on the zero-shot classification task. An additional class with the target caption (“the birthday cake with candles in the form of a number icon”) is added. This setup is expected to confirm that the trigger achieves a 98.8% Adversarial Success Rate (ASR).</p>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">What if there are no backdoor samples in the training set?</h2>
+        <div class="content has-text-justified">
+          <p>
+            One might ask, what if the dataset is completely clean? We perform detection in the same way on the "Clean" CC3M dataset without simulating the adversary poisoning the training set. Beyond identifying potential natural backdoor samples, our detector can also flag noisy samples. For instance, many URLs in web-scale datasets are expired, and placeholder images are used for these URLs, while the original dataset still includes captions for the expired images that are still valid URLs (also see <a href="https://arxiv.org/pdf/2302.10149" target="_blank">Carlini's paper</a> explaining this). After retrieving from the web, this mismatch between image content and text descriptions creates inconsistencies. Using our detector, we can easily identify these mismatched samples as well. A collection of such samples is provided below.
+          </p>
+          <div style="display: flex; flex-direction: column; align-items: center; width: 100%; height: auto; margin: auto">
+            <div align="center">
+              <img src="assets/nosiy_samples.png" alt="Noisy Samples Cake Trigger"/>
+            </div>
+            <div align="center">
+              <b>The top 1,000 samples with the highest backdoor scores, identified using DAO, are retrieved from the CC3M dataset.  </b> 
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{
+        huang2025detecting,
+        title={Detecting Backdoor Samples in Contrastive Language Image Pretraining},
+        author={Hanxun Huang and Sarah Erfani and Yige Li and Xingjun Ma and James Bailey},
+        booktitle={ICLR},
+        year={2025},
+        }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

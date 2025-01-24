@@ -1,6 +1,0 @@
-torch>=2.1.2
-torchvision>=0.16.2
-open_clip_torch
-mlconfig==0.1.0
-pilgram
-scikit-learn
