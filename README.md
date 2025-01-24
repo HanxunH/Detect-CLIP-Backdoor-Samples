@@ -6,7 +6,7 @@ In this work, we introduce a simple yet highly efficient detection approach for 
 
 - **Key Insight:** We identify a critical weakness of CLIP backdoor samples, rooted in the sparsity of their representation within their local neighborhood (see Figure below). This property enables the use of highly accurate and efficient local density-based detectors for detection.
 - **Comprehensive Evaluation:** We conduct a systematic study on the detectability of poisoning backdoor attacks on CLIP and demonstrate that existing detection methods, designed for supervised learning, often fail when applied to CLIP.
-- **Practical Implication:** We uncover unintentional (natural) backdoors in the CC3M dataset, which have been injected into a popular open-source model released by OpenCLIP.
+- **Practical Implication:** We uncover unintentional (natural) backdoors in the [CC3M](https://ai.google.com/research/ConceptualCaptions/) dataset, which have been injected into a popular open-source model released by [OpenCLIP](https://github.com/mlfoundations/open_clip).
 
 <div style="display: flex; flex-direction: column; align-items: center; width: 75%; height: auto; margin: auto">
   <img src="assets/demo.png" alt="CLIP emebedding space" />
@@ -36,7 +36,7 @@ scores = detector(model=model, images=images) # tensor with shape [b]
 - The current implementation assumes that the randomly sampled batch reflects the real poisoning rate of the full dataset. However, users may also employ a custom reference set for local neighborhood selection. For further analysis, see Appendix B.5 of the paper.
 
 ---
-## The unintentional (natural) backdoor samples found on CC3M and reverse-engineered from the OpenCLIP model (RN50 trained on CC12M)
+## The unintentional (natural) backdoor samples found on [CC3M](https://ai.google.com/research/ConceptualCaptions/) and reverse-engineered from the OpenCLIP model (RN50 trained on CC12M)
 
 We applied our detection method to a real-world web-scale dataset and identified several potential unintentional (natural) backdoor samples. Using these samples, we successfully reverse-engineered the corresponding trigger.
 
@@ -48,9 +48,9 @@ We applied our detection method to a real-world web-scale dataset and identified
 </div>
 
 
-- These images appear 798 times in the dataset, which roughly accounts for ~0.03% of the CC3M dataset.
-- These images that have similar content and the same caption *"the birthday cake with candles in the form of number icon."*
-- We suspect these images are a natural (unintentional) backdoor samples and has been learned into models trained on the Conceptual Captions dataset. 
+- These images appear 798 times in the dataset, accounting for approximately 0.03% of the CC3M dataset.
+- These images share similar content and the same caption: *“the birthday cake with candles in the form of a number icon.”*
+- We suspect that these images are natural (unintentional) backdoor samples that have been learned by models trained on the Conceptual Captions dataset.
 
 
 <div style="display: flex; flex-direction: column; align-items: center;">
@@ -64,7 +64,7 @@ We applied our detection method to a real-world web-scale dataset and identified
 
 ### Validate the reverse-engineered trigger
 
-The following commands apply the trigger to the entire ImageNet validation set using the RN50 CLIP encoder pre-trained on cc12m, evaluated on the zero-shot classification task. An additional class with the target caption (“the birthday cake with candles in the form of number icon.”) is added. This setup should confirm that the trigger achieves a 98.8% Adversarial Success Rate (ASR).
+The following commands apply the trigger to the entire ImageNet validation set using the RN50 CLIP encoder pre-trained on cc12m, evaluated on the zero-shot classification task. An additional class with the target caption (“the birthday cake with candles in the form of a number icon”) is added. This setup is expected to confirm that the trigger achieves a 98.8% Adversarial Success Rate (ASR).
 
 ```shell
 python3 birthday_cake_example.py --dataset ImageNet --data_path PATH/TO/YOUR/DATASET --cache_dir PATH/TO/YOUR/CHECKPOINT
