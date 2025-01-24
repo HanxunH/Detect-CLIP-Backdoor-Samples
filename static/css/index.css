@@ -137,3 +137,7 @@ body {
   color: hsl(204, 86%, 53%) !important;
 }
 
+.link:hover {
+  text-decoration: underline;
+}
+
