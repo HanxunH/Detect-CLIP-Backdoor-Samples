@@ -36,7 +36,7 @@ scores = detector(model=model, images=images) # tensor with shape [b]
 - The current implementation assumes that the randomly sampled batch reflects the real poisoning rate of the full dataset. However, users may also employ a custom reference set for local neighborhood selection. For further analysis, see Appendix B.5 of the paper.
 
 ---
-## The unintentional (natural) backdoor samples found on [CC3M](https://ai.google.com/research/ConceptualCaptions/) and reverse-engineered from the OpenCLIP model (RN50 trained on CC12M)
+## The unintentional (natural) backdoor samples found in [CC3M](https://ai.google.com/research/ConceptualCaptions/) and reverse-engineered from the OpenCLIP model (RN50 trained on CC12M)
 
 We applied our detection method to a real-world web-scale dataset and identified several potential unintentional (natural) backdoor samples. Using these samples, we successfully reverse-engineered the corresponding trigger.
 
