@@ -133,5 +133,7 @@ body {
   font-size: smaller;
 }
 
-
+.link {
+  color: hsl(204, 86%, 53%) !important;
+}
 
