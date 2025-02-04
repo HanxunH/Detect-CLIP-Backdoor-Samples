@@ -1,6 +1,14 @@
 # Detecting Backdoor Samples in Contrastive Language Image Pretraining
 
+<div align="center">
+  <a href="https://arxiv.org/pdf/2502.01385" target="_blank"><img src="https://img.shields.io/badge/arXiv-b5212f.svg?logo=arxiv" alt="arXiv"></a>
+  <a href="https://github.com/HanxunH/Detect-CLIP-Backdoor-Samples/blob/main/LICENSE" target="_blank"><img alt="License" src="https://img.shields.io/badge/LICENSE-MIT-green"></a>
+  <a><img alt="Made with Python" src="https://img.shields.io/badge/made_with-Python-blue"></a>
+</div>
+
 Code for ICLR2025 ["Detecting Backdoor Samples in Contrastive Language Image Pretraining"](https://openreview.net/forum?id=KmQEsIfhr9)
+
+---
 
 In this work, we introduce a simple yet highly efficient detection approach for web-scale datasets, specifically designed to detect backdoor samples in CLIP. Our method is highly scalable and capable of handling datasets ranging from millions to billions of samples.
 
