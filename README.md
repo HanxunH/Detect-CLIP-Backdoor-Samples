@@ -100,7 +100,7 @@ One might ask, what if the dataset is completely clean? We perform detection in 
 
 ## Quick start
 
-We provide a notebook for a quick-start demonstration. While we did not explicitly experiment with the detection performance at test time in the paper, however, our method should remain effective in such scenarios.
+We provide a notebook for a quick-start demonstration. While we did not explicitly experiment with the detection performance at test time in the paper, our method should remain effective in such scenarios.
 
 In `QuickStart.ipynb`, we include an example of test-time detection using the pre-trained model from our paper. For simplicity, we assume a low poisoning rate, allowing us to use the default implementation, which computes the backdoor score using the same batch of data as a reference. In cases where this assumption does not hold, using a small clean subset as a reference may be necessary.
 
