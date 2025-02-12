@@ -98,7 +98,22 @@ One might ask, what if the dataset is completely clean? We perform detection in 
 
 ---
 
+## Quick start
+
+We provide a notebook for a quick-start demonstration. While we did not explicitly experiment with the detection performance at test time in the paper, however, our method should remain effective in such scenarios.
+
+In `QuickStart.ipynb`, we include an example of test-time detection using the pre-trained model from our paper. For simplicity, we assume a low poisoning rate, allowing us to use the default implementation, which computes the backdoor score using the same batch of data as a reference. In cases where this assumption does not hold, using a small clean subset as a reference may be necessary.
+
+The pre-trained weights can be found in this [Google Drive link](https://drive.google.com/drive/folders/1yxogWGnrd_YEyg0BgxlR-h-lg3fBkphL?usp=share_link). 
+**Note: These pre-trained models contain backdoors.**
+
+---
+
 ## Reproduce results from the paper
+
+Due to the dynamic nature of web-scale datasets, some URLs may expire, making it difficult to reproduce the exact clean accuracy. However, the attack success rate and detection results remain unaffected.
+
+For example, in this work, we successfully reproduced the results reported by Carlini & Terzis (2022), except for clean accuracy, as we could not access the complete CC3M dataset. Specifically, we were only able to retrieve 2.3 million image-text pairs from CC3M due to expired URLs.
 
 - Step1: Install the required packages from `requirements.txt`.
 - Step2: Prepare the datasets. Refer to [img2dataset](https://github.com/rom1504/img2dataset) for guidance. 

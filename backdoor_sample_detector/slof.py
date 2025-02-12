@@ -23,7 +23,7 @@ class SLOFDetector(nn.Module):
     def forward(self, model, images, texts=None):
         if texts is None:
             # Single modality
-            _, vision_features, _ = model(images)
+            vision_features = model.encode_image(images)
             if self.gather_distributed:
                 full_rank_vision_reference = torch.cat(misc.gather(vision_features), dim=0)
             else:

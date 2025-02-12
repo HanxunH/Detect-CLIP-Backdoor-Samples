@@ -15,7 +15,7 @@ else:
     device = torch.device('cpu')
     
 class ImageNetBackdoorZeroShot(datasets.ImageFolder):
-    def __init__(self, root, transform=None, backdoor_label_idx=954, test_poison_rate=1.0, seed=0):
+    def __init__(self, root, transform=None, backdoor_label_idx=954, test_poison_rate=1.0, seed=0, get_index=False,):
         super(ImageNetBackdoorZeroShot, self).__init__(root=root, transform=transform)
          # By setting seed, we can reproduce the same poison indices when evaluating
         np.random.seed(seed)
@@ -39,6 +39,7 @@ class ImageNetBackdoorZeroShot(datasets.ImageFolder):
         poison_size = int(len(self) * test_poison_rate)
         poison_indices = np.random.choice(np.arange(0, len(self), 1, dtype=int), poison_size, replace=False)
         self.poison_indices = poison_indices.tolist()
+        self.get_index = get_index
         
     def __len__(self):
         return len(self.samples)
@@ -59,7 +60,10 @@ class ImageNetBackdoorZeroShot(datasets.ImageFolder):
 
         if idx in self.poison_indices:
             image, label = self._post_tensor_apply_image_trigger(idx, image, label)
-
+            
+        if self.get_index:
+            return idx, image, label
+        
         return image, label
 
     def _post_tensor_apply_image_trigger(self, idx, image, label):
@@ -72,11 +76,12 @@ class ImageNetBackdoorZeroShot(datasets.ImageFolder):
 
 class ImageNetBadNetsZeroShot(ImageNetBackdoorZeroShot):
     def __init__(self, root, transform=None, backdoor_label_idx=954, test_poison_rate=1.0, seed=0,
-                 patch_location='random', patch_size=16, **kwargs):
+                 patch_location='random', patch_size=16, get_index=False, **kwargs):
         super(ImageNetBadNetsZeroShot, self).__init__(
             root=root, transform=transform, seed=seed, 
             backdoor_label_idx=backdoor_label_idx,
-            test_poison_rate=test_poison_rate)
+            test_poison_rate=test_poison_rate, get_index=get_index,
+            )
 
         self.patch_location = patch_location
         self.patch_size = patch_size

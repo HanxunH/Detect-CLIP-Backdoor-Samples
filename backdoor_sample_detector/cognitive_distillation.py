@@ -32,10 +32,7 @@ class CognitiveDistillation(nn.Module):
         mask = torch.ones(b, self.mask_channel, h, w).to(images.device)
         mask_param = nn.Parameter(mask)
         optimizerR = torch.optim.Adam([mask_param], lr=self.lr, betas=(0.1, 0.1))
-        if texts is None:
-            _, vision_features, _ = model(images)
-        else:
-            vision_features = model.encode_image(images)
+        vision_features = model.encode_image(images)
         
         for _ in range(self.num_steps):
             optimizerR.zero_grad()
