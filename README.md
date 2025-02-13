@@ -72,7 +72,7 @@ We applied our detection method to a real-world web-scale dataset and identified
 
 ### Validate the reverse-engineered trigger
 
-The following commands apply the trigger to the entire ImageNet validation set using the RN50 CLIP encoder pre-trained on cc12m, evaluated on the zero-shot classification task. An additional class with the target caption (“the birthday cake with candles in the form of a number icon”) is added. This setup is expected to confirm that the trigger achieves a 98.8% Adversarial Success Rate (ASR).
+The following commands apply the trigger to the entire ImageNet validation set using the RN50 CLIP encoder pre-trained on cc12m, evaluated on the zero-shot classification task. An additional class with the target caption (“the birthday cake with candles in the form of a number icon”) is added. This setup is expected to confirm that the trigger achieves a 98.8% Attack Success Rate (ASR).
 
 ```shell
 python3 birthday_cake_example.py --dataset ImageNet --data_path PATH/TO/YOUR/DATASET --cache_dir PATH/TO/YOUR/CHECKPOINT
