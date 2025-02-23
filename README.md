@@ -152,6 +152,7 @@ This process computes the detection performance in terms of the area under the r
 
 ---
 ## Citation
+If you use the code or pre-trained models in your work, please cite the accompanying paper:
 ```
 @inproceedings{
 huang2025detecting,
