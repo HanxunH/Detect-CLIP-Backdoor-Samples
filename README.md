@@ -111,7 +111,7 @@ The pre-trained weights can be found in this [Google Drive link](https://drive.g
 ---
 ## HuggingFace
 
-A collection of pre-trained models with interjected backdoor triggers is available on [HuggingFace](https://huggingface.co/models?other=arxiv:2502.01385). An example demonstrating how to use these models can be found in the [HuggingFaceExample.ipynb](HuggingFaceExample.ipynb) notebook. These models correspond to the results reported in Tables 1, 10, and 11 of our paper, and they can be used for quick [verification](QuickStart.ipynb) of backdoor sample detection or for conducting experiments on detecting backdoored models.
+A collection of **pre-trained models with interjected backdoor triggers** is available on [HuggingFace](https://huggingface.co/models?other=arxiv:2502.01385). An example demonstrating how to use these models can be found in the [HuggingFaceExample.ipynb](HuggingFaceExample.ipynb) notebook. These models correspond to the results reported in Tables 1, 10, and 11 of our paper, and they can be used for quick [verification](QuickStart.ipynb) of backdoor sample detection or for conducting experiments on detecting backdoored models.
 
 ---
 ## Reproduce results from the paper
